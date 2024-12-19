@@ -1,16 +1,23 @@
-# zodiverse
+# ZodiVerse
 
-A new Flutter project.
+ZodiVerse is a modern Flutter application designed to explore the world of astrology and zodiac signs. Built with the MVVM architecture and powered by GetX for state management and routing, ZodiVerse ensures a clean, maintainable, and scalable codebase.
 
-## Getting Started
+## Features
+- Explore detailed information about zodiac signs.
+- Intuitive navigation powered by GetX routing.
+- Real-time API integration for fetching zodiac-related data.
+- Clean and maintainable MVVM architecture.
+- Comprehensive unit, widget, and integration tests for reliability.
+ 
+## Technologies Used
 
-This project is a starting point for a Flutter application.
+Flutter: A powerful UI toolkit for creating natively compiled applications.
+GetX: State management, dependency injection, and routing.
+HTTP: For API calls and data fetching.
+Dart: Programming language for Flutter.
+Unit & Integration Testing: Ensures the app’s reliability and quality.
 
-A few resources to get you started if this is your first Flutter project:
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
