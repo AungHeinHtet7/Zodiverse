@@ -86,55 +86,56 @@ class RegisterScreen extends StatelessWidget {
               SizedBox(height: 16),
               // Password Text Field
               Obx(() => TextField(
-                onChanged: (value) => controller.password.value = value,
-                obscureText: controller.isPasswordHidden.value,
-                decoration: InputDecoration(
-                  labelText: 'Create Password',
-                  labelStyle: TextStyle(color: Colors.white),
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.1),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide.none,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      controller.isPasswordHidden.value
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: Colors.white,
+                    onChanged: (value) => controller.password.value = value,
+                    obscureText: controller.isPasswordHidden.value,
+                    decoration: InputDecoration(
+                      labelText: 'Create Password',
+                      labelStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.1),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide.none,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          controller.isPasswordHidden.value
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.white,
+                        ),
+                        onPressed: controller.togglePasswordVisibility,
+                      ),
                     ),
-                    onPressed: controller.togglePasswordVisibility,
-                  ),
-                ),
-                style: TextStyle(color: Colors.white),
-              )),
+                    style: TextStyle(color: Colors.white),
+                  )),
               SizedBox(height: 16),
               // Confirm Password Text Field
               Obx(() => TextField(
-                onChanged: (value) => controller.confirmPassword.value = value,
-                obscureText: controller.isConfirmPasswordHidden.value,
-                decoration: InputDecoration(
-                  labelText: 'Confirm Password',
-                  labelStyle: TextStyle(color: Colors.white),
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.1),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide.none,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      controller.isConfirmPasswordHidden.value
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: Colors.white,
+                    onChanged: (value) =>
+                        controller.confirmPassword.value = value,
+                    obscureText: controller.isConfirmPasswordHidden.value,
+                    decoration: InputDecoration(
+                      labelText: 'Confirm Password',
+                      labelStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.1),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide.none,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          controller.isConfirmPasswordHidden.value
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.white,
+                        ),
+                        onPressed: controller.toggleConfirmPasswordVisibility,
+                      ),
                     ),
-                    onPressed: controller.toggleConfirmPasswordVisibility,
-                  ),
-                ),
-                style: TextStyle(color: Colors.white),
-              )),
+                    style: TextStyle(color: Colors.white),
+                  )),
               SizedBox(height: 32),
               // Register Button
               SizedBox(

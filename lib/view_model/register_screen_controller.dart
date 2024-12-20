@@ -9,6 +9,8 @@ class RegisterController extends GetxController {
   var password = ''.obs;
   var confirmPassword = ''.obs;
 
+  final AuthRepository _repository = AuthRepository();
+
   // Toggle visibility for password fields
   void togglePasswordVisibility() {
     isPasswordHidden.value = !isPasswordHidden.value;
@@ -20,7 +22,10 @@ class RegisterController extends GetxController {
 
   // Handle registration logic
   void register() {
-    if (email.isEmpty || username.isEmpty || password.isEmpty || confirmPassword.isEmpty) {
+    if (email.isEmpty ||
+        username.isEmpty ||
+        password.isEmpty ||
+        confirmPassword.isEmpty) {
       Get.snackbar('Error', 'Please fill in all fields');
     } else if (password.value != confirmPassword.value) {
       Get.snackbar('Error', 'Passwords do not match');
