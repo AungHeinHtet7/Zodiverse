@@ -6,6 +6,8 @@ import '../view_model/register_screen_controller.dart';
 class RegisterScreen extends StatelessWidget {
   final RegisterController controller = Get.put(RegisterController());
 
+  RegisterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

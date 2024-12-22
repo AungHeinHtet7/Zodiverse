@@ -1,21 +1,22 @@
 class LoginModel {
-  String email;
+  String? email;
+  String? username;
   String password;
 
-  LoginModel({required this.email, required this.password});
+  LoginModel({this.email, this.username, required this.password});
 
-  // Convert a LoginModel object to a JSON map
   Map<String, dynamic> toJson() {
     return {
       'email': email,
+      'username': username,
       'password': password,
     };
   }
 
-  // Create a LoginModel object from a JSON map
   factory LoginModel.fromJson(Map<String, dynamic> json) {
     return LoginModel(
       email: json['email'],
+      username: json['username'],
       password: json['password'],
     );
   }

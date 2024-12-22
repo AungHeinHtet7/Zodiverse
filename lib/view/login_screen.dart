@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../view_model/login_controller.dart';
+
 class LoginScreen extends StatelessWidget {
   final LoginController controller = Get.put(LoginController());
 
@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 40),
               // Username/Email Text Field
               TextField(
-                onChanged: (value) => controller.username.value = value,
+                onChanged: (value) => controller.emailOrUsername.value = value,
                 decoration: InputDecoration(
                   labelText: 'Enter Username/Email',
                   labelStyle: TextStyle(color: Colors.grey),
@@ -69,29 +69,29 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 16),
               // Password Text Field
               Obx(() => TextField(
-                onChanged: (value) => controller.password.value = value,
-                obscureText: controller.isPasswordHidden.value,
-                decoration: InputDecoration(
-                  labelText: 'Enter Password',
-                  labelStyle: TextStyle(color: Colors.white),
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.1),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide.none,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: Icon(
-                      controller.isPasswordHidden.value
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: Colors.white,
+                    onChanged: (value) => controller.password.value = value,
+                    obscureText: controller.isPasswordHidden.value,
+                    decoration: InputDecoration(
+                      labelText: 'Enter Password',
+                      labelStyle: TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.1),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide.none,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          controller.isPasswordHidden.value
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.white,
+                        ),
+                        onPressed: controller.togglePasswordVisibility,
+                      ),
                     ),
-                    onPressed: controller.togglePasswordVisibility,
-                  ),
-                ),
-                style: TextStyle(color: Colors.white),
-              )),
+                    style: TextStyle(color: Colors.white),
+                  )),
               SizedBox(height: 32),
               // Login Button
               SizedBox(

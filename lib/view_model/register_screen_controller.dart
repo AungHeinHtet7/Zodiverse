@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:zodiverse/data/repositories/auth_repository.dart';
 
 class RegisterController extends GetxController {
   // Observables
