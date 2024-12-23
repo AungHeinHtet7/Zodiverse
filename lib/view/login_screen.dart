@@ -25,22 +25,7 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 40),
-              // AppBar with back button
-              GestureDetector(
-                onTap: () => Get.back(),
-                child: Row(
-                  children: [
-                    Icon(Icons.arrow_back, color: Colors.white),
-                    SizedBox(width: 8),
-                    Text(
-                      'Back',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 40),
+              SizedBox(height: 100),
               // Login Title
               Text(
                 'Login',
